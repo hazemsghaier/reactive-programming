@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Exemple de changeSet avec sqlFile -->
+    <changeSet id="001-create-users-table" author="hazem sghaier">
+        <sqlFile
+                path="classpath:db/changelog/change-Sets/001-create-users-table.sql"
+                relativeToChangelogFile="false"
+                endDelimiter=";"
+                splitStatements="true"
+                stripComments="true"/>
+    </changeSet>
+    <changeSet id="002-create-tasks-table.sql" author="hazem sghaier">
+        <sqlFile
+                path="classpath:db/changelog/change-Sets/002-create-tasks-table.sql"
+                relativeToChangelogFile="false"
+                endDelimiter=";"
+                splitStatements="true"
+                stripComments="true"/>
+    </changeSet>
+
+
+</databaseChangeLog>

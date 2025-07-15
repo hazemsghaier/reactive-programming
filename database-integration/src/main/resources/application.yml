@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: database-integration
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.xml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/todo-reactive
+    username: admin
+    password: admin
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/todo-reactive
+    username: admin
+    password: admin
+server:
+  port: 9000
+
