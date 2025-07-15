@@ -12,16 +12,14 @@
                 path="classpath:db/changelog/change-Sets/001-create-users-table.sql"
                 relativeToChangelogFile="false"
                 endDelimiter=";"
-                splitStatements="true"
-                stripComments="true"/>
+                splitStatements="true"/>
     </changeSet>
     <changeSet id="002-create-tasks-table.sql" author="hazem sghaier">
         <sqlFile
                 path="classpath:db/changelog/change-Sets/002-create-tasks-table.sql"
                 relativeToChangelogFile="false"
                 endDelimiter=";"
-                splitStatements="true"
-                stripComments="true"/>
+                splitStatements="true"/>
     </changeSet>
 
 

@@ -2,8 +2,11 @@ spring:
   application:
     name: database-integration
   liquibase:
+    url: jdbc:postgresql://localhost:5432/todo-reactive
+    password: admin
     enabled: true
     change-log: classpath:db/changelog/db.changelog-master.xml
+    user: admin
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/todo-reactive
