@@ -1,4 +1,4 @@
-package org.hazem.reactive.databaseintegration.dto;
+package org.hazem.reactive.databaseintegration.dto.reponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

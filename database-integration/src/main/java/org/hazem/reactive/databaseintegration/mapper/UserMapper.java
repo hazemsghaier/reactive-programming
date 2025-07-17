@@ -1,7 +1,7 @@
 package org.hazem.reactive.databaseintegration.mapper;
 
-import org.hazem.reactive.databaseintegration.dto.AddUserDto;
-import org.hazem.reactive.databaseintegration.dto.UpdateUserDto;
+import org.hazem.reactive.databaseintegration.dto.reponse.AddUserDto;
+import org.hazem.reactive.databaseintegration.dto.reponse.UpdateUserDto;
 import org.hazem.reactive.databaseintegration.entity.UserEntity;
 
 public class UserMapper {
