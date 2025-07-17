@@ -2,8 +2,8 @@ package org.hazem.reactive.databaseintegration.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.hazem.reactive.databaseintegration.dto.reponse.AddUserDto;
-import org.hazem.reactive.databaseintegration.dto.reponse.UpdateUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.AddUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.UpdateUserDto;
 import org.hazem.reactive.databaseintegration.entity.UserEntity;
 import org.hazem.reactive.databaseintegration.exeptions.ConflictExeception;
 import org.hazem.reactive.databaseintegration.exeptions.DataAccessException;
@@ -23,7 +23,8 @@ public class UserService implements IUserService {
     @Override
     public Mono<UpdateUserDto> addUser(AddUserDto addUserDto) {
         return userRepository.findByEmail(addUserDto.getEmail())
-                        .flatMap(userEntity -> Mono.<UserEntity>error(new ConflictExeception("User already exists")))
+                        .flatMap(userEntity ->{
+                            return Mono.<UserEntity>error(new ConflictExeception("User already exists"));} )
                     .switchIfEmpty(userRepository.save(UserMapper.toUserEntity(addUserDto)))
                     .map(UserMapper::toUpdateUserDto)
                 .onErrorMap(err->!(err instanceof ConflictExeception),

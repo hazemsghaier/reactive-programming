@@ -1,8 +1,8 @@
 package org.hazem.reactive.databaseintegration.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.hazem.reactive.databaseintegration.dto.reponse.AddUserDto;
-import org.hazem.reactive.databaseintegration.dto.reponse.UpdateUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.AddUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.UpdateUserDto;
 import org.hazem.reactive.databaseintegration.service.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

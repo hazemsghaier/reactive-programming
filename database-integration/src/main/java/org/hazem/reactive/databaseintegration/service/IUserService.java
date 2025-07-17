@@ -1,7 +1,7 @@
 package org.hazem.reactive.databaseintegration.service;
 
-import org.hazem.reactive.databaseintegration.dto.reponse.AddUserDto;
-import org.hazem.reactive.databaseintegration.dto.reponse.UpdateUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.AddUserDto;
+import org.hazem.reactive.databaseintegration.dto.request.UpdateUserDto;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
