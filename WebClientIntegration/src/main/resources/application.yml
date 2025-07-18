@@ -7,7 +7,7 @@ spring:
     username: admin
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
-    url: jdbc:postgresql://localhost:5432/webclientDemo
+    url: jdbc:postgresql://localhost:5432/webclientdemo
     password: admin
     user: admin
     enabled: true

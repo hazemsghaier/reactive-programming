@@ -6,28 +6,29 @@
         http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-  <!-- Changeset 1 : création de la table users -->
-  <changeSet id="1-create-users-table" author="hazem">
+  <changeSet id="0.0.1_create_users" author="hazem">
     <sqlFile
-            path="classpath:sql/1_create_users.sql"
-            relativeToChangelogFile="true"
+            path="classpath:sql/0.0.1_create_users.sql"
             splitStatements="true"
             endDelimiter=";"/>
   </changeSet>
 
-  <!-- Changeset 2 : création de la table products -->
-  <changeSet id="2-create-products-table" author="hazem">
+  <changeSet id="0.0.2_create_product" author="hazem">
     <sqlFile
-            path="classpath:sql/2_create_products.sql"
-            relativeToChangelogFile="true"
+            path="classpath:sql/0.0.2_create_product.sql"
             splitStatements="true"
             endDelimiter=";"/>
   </changeSet>
 
-  <!-- Changeset 3 : insertion de données de test dans users -->
-  <changeSet id="3-insert-sample-users" author="hazem">
+  <changeSet id="0.0.3_create_card" author="hazem">
     <sqlFile
-            path="classpath:sql/3_insert_sample_users.sql"
+            path="classpath:sql/0.0.3_create_card.sql"
+            splitStatements="true"
+            endDelimiter=";"/>
+  </changeSet>
+  <changeSet id="0.0.4_create_cartItem" author="hazem">
+    <sqlFile
+            path="classpath:sql/0.0.4_create_cartItem.sql"
             splitStatements="true"
             endDelimiter=";"/>
   </changeSet>
