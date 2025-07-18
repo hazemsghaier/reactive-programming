@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: WebClientIntegration
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres
+    password: admin
+    username: admin
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    url: jdbc:postgresql://localhost:5432/webclientDemo
+    password: admin
+    user: admin
+    enabled: true
+server:
+  port: 8888

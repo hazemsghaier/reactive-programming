@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+        http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <!-- Changeset 1 : création de la table users -->
+  <changeSet id="1-create-users-table" author="hazem">
+    <sqlFile
+            path="classpath:sql/1_create_users.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            endDelimiter=";"/>
+  </changeSet>
+
+  <!-- Changeset 2 : création de la table products -->
+  <changeSet id="2-create-products-table" author="hazem">
+    <sqlFile
+            path="classpath:sql/2_create_products.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            endDelimiter=";"/>
+  </changeSet>
+
+  <!-- Changeset 3 : insertion de données de test dans users -->
+  <changeSet id="3-insert-sample-users" author="hazem">
+    <sqlFile
+            path="classpath:sql/3_insert_sample_users.sql"
+            splitStatements="true"
+            endDelimiter=";"/>
+  </changeSet>
+
+</databaseChangeLog>
